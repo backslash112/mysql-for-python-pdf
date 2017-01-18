@@ -33,8 +33,7 @@ INSERT INTO fish VALUES
 (7,'salmon','9.50'),
 (8,'trout','6.00'),
 (9,'tuna','7.50'),
-(10,'yellowfintuna','12.00'),
+(10,'yellowfin tuna','12.00'),
 (11,'yellowfin tuna','13.00'),
-(12,'tuna','7.50'),
-(13, 'carl', '6.28');
+(12,'tuna','7.50');
 unlock tables;
