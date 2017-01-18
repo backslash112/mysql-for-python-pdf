@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import MySQLdb as mysql
+import optparse
 
 mydb = mysql.connect(host="localhost",
                            user="root",
@@ -9,6 +10,13 @@ cur = mydb.cursor()
 
 column = 'name'
 term = 's%'
+
+# optparse
+opt = optparse.OptionParser()
+opt.add_option("-q", "--query", action="store", type="string", dest="term")
+opt, args = opt.parse_args()
+term = opt.term
+
 statement = """select %s from fish where name like '%s'""" % (column, term)
 command = cur.execute(statement)
 results = cur.fetchall()
