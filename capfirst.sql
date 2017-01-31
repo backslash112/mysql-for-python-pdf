@@ -1,6 +1,6 @@
 DELIMITER @@
 
-create function Capitalise7 (instring varchar(1000))
+create function Capitalise (instring varchar(1000))
 returns varchar(1000)
 
 begin
